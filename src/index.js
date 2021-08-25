@@ -42,5 +42,7 @@ if (localStorage.getItem('currentTheme') === 'light-theme') {
   document.body.classList.add('dark-theme');
   localStorage.setItem('currentTheme', Theme.DARK);
   checkboxEl.checked = 'true';
+} else if (localStorage.getItem('currentTheme') === null) {
+  document.body.classList.add('light-theme');
+  localStorage.setItem('currentTheme', Theme.LIGHT);
 }
-console.log('error none1');
